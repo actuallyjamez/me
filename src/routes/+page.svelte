@@ -41,7 +41,10 @@
 </svelte:head>
 
 {#if visible}
-	<div class="absolute bg-black -z-10 w-[500px]" style="left: {m.x}px; top: {m.y}px;">
+	<div
+		class="absolute bg-black -z-10 w-[500px] hidden md:block"
+		style="left: {m.x}px; top: {m.y}px;"
+	>
 		<img src={currentImage} alt="" class="object-cover aspect-video" />
 	</div>
 {/if}
