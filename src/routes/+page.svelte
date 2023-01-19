@@ -41,7 +41,10 @@
 </svelte:head>
 
 {#if visible}
-	<div class="absolute bg-black -z-10 w-[500px]" style="left: {m.x}px; top: {m.y}px;">
+	<div
+		class="absolute bg-black -z-10 w-[500px] hidden md:block"
+		style="left: {m.x}px; top: {m.y}px;"
+	>
 		<img src={currentImage} alt="" class="object-cover aspect-video" />
 	</div>
 {/if}
@@ -92,7 +95,9 @@
 	</p>
 	<p class="font-light text-lg xl:text-xl mt-6">
 		Always excited to learn something new. I'm proficient in many languages/frameworks and strive to
-		deliver high quality results.
+		deliver high quality results. I've worked on a variety of projects, from small internal tools to
+		large scale web applications. I'm always looking for new challenges and opportunities to learn.
+		Below are a few notable public projects I've worked on.
 	</p>
 </Section>
 
