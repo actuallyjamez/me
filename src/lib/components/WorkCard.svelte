@@ -1,4 +1,4 @@
-<div class="pb-20">
+<div class="pb-20" on:mouseenter on:mouseleave>
   <h1 class="text-lg font-medium">
     <slot name="title"/>
   </h1>
