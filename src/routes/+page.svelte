@@ -21,7 +21,11 @@
 
 	type WithTarget<Event, Target> = Event & { currentTarget: Target };
 
-	let images = [EngineerImage, SantanderImage, CityImage];
+	let images = [
+		'https://media.tenor.com/IXx91fddegMAAAAd/laptop-browsing.gif',
+		SantanderImage,
+		CityImage
+	];
 
 	let currentImage: string | undefined = undefined;
 
@@ -53,7 +57,7 @@
 				}}
 				src={image}
 				alt=""
-				class="object-cover aspect-video absolute right-0 rounded-xl shadow-2xl mx-8 max-w-3xl z-30 pointer-events-none"
+				class="object-cover aspect-video absolute right-0 rounded-xl shadow-2xl mx-8 max-w-3xl pointer-events-none"
 			/>
 		{/if}
 	{/each}
@@ -70,7 +74,8 @@
 		Currently working as a
 		<span
 			class="font-normal cursor-cell"
-			on:mouseenter={() => (currentImage = EngineerImage)}
+			on:mouseenter={() =>
+				(currentImage = 'https://media.tenor.com/IXx91fddegMAAAAd/laptop-browsing.gif')}
 			on:mouseleave={() => (currentImage = undefined)}
 		>
 			Software Engineer
@@ -90,10 +95,10 @@
 	</div>
 </div>
 
-<Section>
+<Section class="">
 	<svelte:fragment slot="title">About</svelte:fragment>
 
-	<p class="text-2xl xl:text-3xl">
+	<p class="text-2xl xl:text-3xl ">
 		I am a customer-focused full-stack software programmer with experience in creating performant
 		and engaging web experiences.
 	</p>
@@ -109,10 +114,7 @@
 	<svelte:fragment slot="title">Notable Work</svelte:fragment>
 
 	<WorkGrid>
-		<WorkCard
-			on:mouseenter={() => (otherVisible = true)}
-			on:mouseleave={() => (otherVisible = false)}
-		>
+		<WorkCard>
 			<svelte:fragment slot="title">Sonar</svelte:fragment>
 			<svelte:fragment slot="description">
 				Sonar was an small proof of concept spotify player, designed for large format displays which
