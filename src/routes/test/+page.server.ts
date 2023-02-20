@@ -10,8 +10,8 @@ const longRunningTask = async () => {
 export const load = (async () => {
 	const data = longRunningTask();
 	return {
-		defer: {
-			thing: data
+		ayo: {
+			yoo: data
 		}
 	};
 }) satisfies PageServerLoad;

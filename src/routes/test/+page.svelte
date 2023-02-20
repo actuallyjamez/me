@@ -4,10 +4,10 @@
 	export let data: PageData;
 </script>
 
-{#await data.defer.thing}
+{#await data.ayo.yoo}
 	yoo?
-{:then data}
-	{data}
+{:then yoo}
+	{yoo}
 {:catch error}
 	{error}
 {/await}
