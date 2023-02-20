@@ -1,6 +1,10 @@
 <script>
 	import '../fonts/wotfard/stylesheet.css';
 	import '../app.css';
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <div class="w-full h-96 absolute bg-gradient-to-b from-green-100/50 to-transparent -z-20" />
