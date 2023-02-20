@@ -5,7 +5,7 @@
 </script>
 
 {#await data.defer.thing}
-	yooo..?
+	yoo?
 {:then data}
 	{data}
 {:catch error}
