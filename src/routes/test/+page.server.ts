@@ -3,7 +3,7 @@ import type { PageServerLoad } from './$types';
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const longRunningTask = async () => {
-	await sleep(1000);
+	await sleep(3000);
 	return 'hello world';
 };
 
