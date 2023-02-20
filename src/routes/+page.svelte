@@ -138,7 +138,7 @@
 			<svelte:fragment slot="description">
 				The Live Enhancement Suite is a collection of macros designed to enhance the experience of
 				working with Ableton Live. I wrote the MacOS installer as an exercise in learning Electron,
-				and desktop application development. The project remains open source and is active used by
+				and desktop application development. The project remains open source and is actively used by
 				award winning musicians.
 			</svelte:fragment>
 			<svelte:fragment slot="actions">
