@@ -4,7 +4,7 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const longRunningTask = async () => {
 	await sleep(3000);
-	return 'hello world';
+	return 'ayo yoo!';
 };
 
 export const load = (async () => {
