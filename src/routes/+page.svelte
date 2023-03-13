@@ -7,6 +7,7 @@
 	import Section from '$lib/components/Section.svelte';
 	import WorkGrid from '$lib/components/WorkGrid.svelte';
 	import WorkCard from '$lib/components/WorkCard.svelte';
+	import { fade, scale } from 'svelte/transition';
 
 	type WithTarget<Event, Target> = Event & { currentTarget: Target };
 
@@ -24,12 +25,12 @@
 		m = { x: e.clientX, y: e.clientY };
 	}
 
-	function handleMouseEnter(image: string) {
+	async function handleMouseEnter(image: string) {
 		currentImage = image;
 		visible = true;
 	}
 
-	function handleMouseLeave() {
+	async function handleMouseLeave() {
 		visible = false;
 	}
 </script>
@@ -40,16 +41,33 @@
 	<title>James Morris</title>
 </svelte:head>
 
-{#if visible}
-	<div class="fixed pointer-events-none z-10 w-[500px] hidden md:block" style="left: {m.x}px; top: {m.y}px;">
-		<img
-			src={currentImage}
-			alt=""
-			class="object-cover aspect-video rounded-2xl border border-black/10"
-		/>
-	</div>
-{/if}
-
+<div class="fixed pointer-events-none z-50" style="left: {m.x}px; top: {m.y}px;">
+	{#if visible}
+		<div transition:fade={{duration: 150}}>
+			<div transition:scale={{start: .8, duration: 150}} class="w-[500px] hidden md:block">
+				{#if currentImage === images.engineer}
+					<img
+						src={images.engineer}
+						alt=""
+						class="object-cover aspect-video rounded-2xl border border-black/10 shadow-2xl"
+					/>
+				{:else if currentImage === images.santander}
+					<img
+						src={images.northampton}
+						alt=""
+						class="object-cover aspect-video rounded-2xl border border-black/10 shadow-2xl"
+					/>
+				{:else if currentImage === images.northampton}
+					<img
+						src={images.santander}
+						alt=""
+						class="object-cover aspect-video rounded-2xl border border-black/10 shadow-2xl"
+					/>
+				{/if}
+			</div>
+		</div>
+	{/if}
+</div>
 <div class="sticky flex top-0 p-8 z-50 lg: -ml-4">
 	<Nav />
 </div>
@@ -109,9 +127,9 @@
 		<WorkCard>
 			<svelte:fragment slot="title">Sonar</svelte:fragment>
 			<svelte:fragment slot="description">
-				Sonar is a small proof of concept spotify player, designed for large format displays which
-				I built to learn Vue.js and the fundamentals of realtime cross device reactivity. The
-				project uses the Spotify Connect API to allow users to control playback on their devices.
+				Sonar is a small proof of concept spotify player, designed for large format displays which I
+				built to learn Vue.js and the fundamentals of realtime cross device reactivity. The project
+				uses the Spotify Connect API to allow users to control playback on their devices.
 			</svelte:fragment>
 			<svelte:fragment slot="actions">
 				<ButtonLink href="https://github.com/actuallyjamez/sonar">View source</ButtonLink>
