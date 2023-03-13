@@ -109,7 +109,7 @@
 		<WorkCard>
 			<svelte:fragment slot="title">Sonar</svelte:fragment>
 			<svelte:fragment slot="description">
-				Sonar was a small proof of concept spotify player, designed for large format displays which
+				Sonar is a small proof of concept spotify player, designed for large format displays which
 				I built to learn Vue.js and the fundamentals of realtime cross device reactivity. The
 				project uses the Spotify Connect API to allow users to control playback on their devices.
 			</svelte:fragment>
