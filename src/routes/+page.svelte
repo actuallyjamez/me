@@ -53,13 +53,13 @@
 					/>
 				{:else if currentImage === images.santander}
 					<img
-						src={images.northampton}
+						src={images.santander}
 						alt=""
 						class="object-cover aspect-video rounded-2xl border border-black/10 shadow-2xl"
 					/>
 				{:else if currentImage === images.northampton}
 					<img
-						src={images.santander}
+						src={images.northampton}
 						alt=""
 						class="object-cover aspect-video rounded-2xl border border-black/10 shadow-2xl"
 					/>
