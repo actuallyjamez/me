@@ -38,7 +38,7 @@
 	</svg>
 </div>
 
-<div class="max-w-7xl mx-auto isolate">
+<div class="max-w-7xl mx-auto">
 	<slot />
 </div>
 

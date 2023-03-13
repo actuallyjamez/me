@@ -41,11 +41,12 @@
 </svelte:head>
 
 {#if visible}
-	<div
-		class="absolute bg-black -z-10 w-[500px] hidden md:block"
-		style="left: {m.x}px; top: {m.y}px;"
-	>
-		<img src={currentImage} alt="" class="object-cover aspect-video" />
+	<div class="fixed pointer-events-none z-10 w-[500px] hidden md:block" style="left: {m.x}px; top: {m.y}px;">
+		<img
+			src={currentImage}
+			alt=""
+			class="object-cover aspect-video rounded-2xl border border-black/10"
+		/>
 	</div>
 {/if}
 

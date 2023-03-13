@@ -27,7 +27,7 @@
 	<div class="flex justify-between">
 		{#each items as [label, href] (href)}
 			<a
-				class="relative sm:after:content-['_↗'] py-4 px-6 rounded-full group"
+				class="relative sm:after:content-['_↗'] py-4 px-6 group"
 				rel="noopener noreferrer"
 				target="_blank"
 				on:mouseenter={() => (selected = href)}
