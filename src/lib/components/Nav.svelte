@@ -23,6 +23,7 @@
 <div
 	class={'flex justify-between border border-black/5 bg-white/60 shadow-xl transition-shadow duration-200 backdrop-blur-md rounded-full'}
 	on:mouseleave={() => (selected = undefined)}
+	
 >
 	<div class="flex justify-between">
 		{#each items as [label, href] (href)}
@@ -31,6 +32,8 @@
 				rel="noopener noreferrer"
 				target="_blank"
 				on:mouseenter={() => (selected = href)}
+				on:focus={() => (selected = href)}
+				on:focusout={() => (selected = undefined)}
 				{href}
 			>
 				{#if selected === href}
