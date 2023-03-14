@@ -75,7 +75,7 @@
 	<h1 class="text-3xl font-medium xl:text-4xl">James Morris</h1>
 	<p class="mt-6 max-w-md text-lg font-light xl:text-xl" on:mouseleave={handleMouseLeave}>
 		Cool person from <span
-			class="group cursor-cell rounded-md bg-black/5 px-1 font-normal transition-colors hover:bg-black/10 xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
+			class="group cursor-cell md:rounded-md md:px-1 font-normal md:bg-black/5 transition-all md:hover:bg-black/10 xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.northampton)}
 			on:mouseleave={handleMouseLeave}
 		>
@@ -92,7 +92,7 @@
 		</span>
 		Currently working as a
 		<span
-			class="group cursor-cell rounded-md bg-black/5 px-1 font-normal transition-colors hover:bg-black/10 xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
+			class="group cursor-cell md:rounded-md md:px-1 font-normal md:bg-black/5 transition-all md:hover:bg-black/10 xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.engineer)}
 			on:mouseleave={handleMouseLeave}
 		>
@@ -114,7 +114,7 @@
 			on:mouseleave={handleMouseLeave}
 		>
 			<span
-				class="rounded-md bg-black/5 px-1 transition-colors duration-150 group-hover:bg-black/10"
+				class="rounded-md md:bg-black/5 md:px-1 transition-all duration-150 md:group-hover:bg-black/10"
 			>
 				Santander.
 			</span>
