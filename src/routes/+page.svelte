@@ -75,7 +75,7 @@
 	<h1 class="text-3xl font-medium xl:text-4xl">James Morris</h1>
 	<p class="mt-6 max-w-md text-lg font-light xl:text-xl" on:mouseleave={handleMouseLeave}>
 		Cool person from <span
-			class="group md:cursor-cell font-normal transition-all md:rounded-md md:bg-black/5 md:px-1 md:hover:bg-black/10 lg:transition-colors xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
+			class="group font-normal transition-all md:cursor-cell md:rounded-md md:bg-black/5 md:px-1 md:hover:bg-black/10 lg:transition-colors xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.northampton)}
 			on:mouseleave={handleMouseLeave}
 		>
@@ -92,7 +92,7 @@
 		</span>
 		Currently working as a
 		<span
-			class="group md:cursor-cell font-normal transition-all md:rounded-md md:bg-black/5 md:px-1 md:hover:bg-black/10 lg:transition-colors xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
+			class="group font-normal transition-all md:cursor-cell md:rounded-md md:bg-black/5 md:px-1 md:hover:bg-black/10 lg:transition-colors xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.engineer)}
 			on:mouseleave={handleMouseLeave}
 		>
@@ -109,12 +109,12 @@
 		</span>
 		at a company called
 		<span
-			class="group md:cursor-cell font-normal"
+			class="group font-normal md:cursor-cell"
 			on:mouseenter={() => handleMouseEnter(images.santander)}
 			on:mouseleave={handleMouseLeave}
 		>
 			<span
-				class="rounded-md transition-all lg:transition-colors duration-150 md:bg-black/5 md:px-1 md:group-hover:bg-black/10"
+				class="rounded-md transition-all duration-150 md:bg-black/5 md:px-1 md:group-hover:bg-black/10 lg:transition-colors"
 			>
 				Santander.
 			</span>
