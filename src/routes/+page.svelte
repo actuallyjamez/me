@@ -2,7 +2,6 @@
 	import ButtonLink from '$lib/components/ButtonLink.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import CityImage from '$lib/images/city.webp';
-	import EngineerImage from '$lib/images/engineer.webp';
 	import SantanderImage from '$lib/images/santander.jpg';
 	import Section from '$lib/components/Section.svelte';
 	import WorkGrid from '$lib/components/WorkGrid.svelte';
@@ -12,7 +11,7 @@
 	type WithTarget<Event, Target> = Event & { currentTarget: Target };
 
 	let images = {
-		engineer: EngineerImage,
+		engineer: 'https://media.tenor.com/IXx91fddegMAAAAd/laptop-browsing.gif',
 		santander: SantanderImage,
 		northampton: CityImage
 	};
