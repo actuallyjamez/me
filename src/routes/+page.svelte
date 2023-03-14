@@ -134,10 +134,10 @@
 		and engaging web experiences.
 	</p>
 	<p class="mt-6 text-lg font-light xl:text-xl">
-		Always excited to learn something new. I'm proficient in many languages/frameworks and strive to
-		deliver high quality results. I've worked on a variety of projects, from small internal tools to
-		large scale web applications. I'm always looking for new challenges and opportunities to learn.
-		Below are a few notable public projects I've worked on.
+		I'm always eager to learn and expand my skill set. I'm well-versed in multiple programming
+		languages and frameworks, and I take pride in delivering top-notch work. Whether I'm working on
+		a small tool or a big web app, I enjoy the challenge of finding innovative solutions. Check out
+		some of the cool projects I've worked on below!
 	</p>
 </Section>
 
