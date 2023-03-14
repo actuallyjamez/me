@@ -87,7 +87,7 @@
 			<span
 				class="transition-colors duration-150 lg:transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
 			>
-				{' '}Kingdom.
+				Kingdom.
 			</span>
 		</span>
 		Currently working as a
@@ -99,12 +99,12 @@
 			<span
 				class="transition-colors lg:transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
 			>
-				Software{' '}
+				Software
 			</span>
 			<span
 				class="transition-colors duration-150 lg:transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
 			>
-				{' '}Engineer
+				Engineer
 			</span>
 		</span>
 		at a company called
