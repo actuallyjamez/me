@@ -75,34 +75,34 @@
 	<h1 class="text-3xl font-medium xl:text-4xl">James Morris</h1>
 	<p class="mt-6 max-w-md text-lg font-light xl:text-xl" on:mouseleave={handleMouseLeave}>
 		Cool person from <span
-			class="group cursor-cell md:rounded-md md:px-1 font-normal md:bg-black/5 transition-all md:hover:bg-black/10 xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
+			class="group cursor-cell font-normal transition-all md:rounded-md md:bg-black/5 md:px-1 md:hover:bg-black/10 lg:transition-colors xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.northampton)}
 			on:mouseleave={handleMouseLeave}
 		>
 			<span
-				class="transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
+				class="transition-colors lg:transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
 			>
 				Northampton, United{' '}
 			</span>
 			<span
-				class="transition-colors duration-150 xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
+				class="transition-colors duration-150 lg:transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
 			>
 				{' '}Kingdom.
 			</span>
 		</span>
 		Currently working as a
 		<span
-			class="group cursor-cell md:rounded-md md:px-1 font-normal md:bg-black/5 transition-all md:hover:bg-black/10 xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
+			class="group cursor-cell font-normal transition-all md:rounded-md md:bg-black/5 md:px-1 md:hover:bg-black/10 lg:transition-colors xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.engineer)}
 			on:mouseleave={handleMouseLeave}
 		>
 			<span
-				class="transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
+				class="transition-colors lg:transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
 			>
 				Software{' '}
 			</span>
 			<span
-				class="transition-colors duration-150 xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
+				class="transition-colors duration-150 lg:transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
 			>
 				{' '}Engineer
 			</span>
@@ -114,7 +114,7 @@
 			on:mouseleave={handleMouseLeave}
 		>
 			<span
-				class="rounded-md md:bg-black/5 md:px-1 transition-all duration-150 md:group-hover:bg-black/10"
+				class="rounded-md transition-all lg:transition-colors duration-150 md:bg-black/5 md:px-1 md:group-hover:bg-black/10"
 			>
 				Santander.
 			</span>
