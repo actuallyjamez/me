@@ -41,66 +41,88 @@
 	<title>James Morris</title>
 </svelte:head>
 
-<div class="fixed pointer-events-none z-50" style="left: {m.x}px; top: {m.y}px;">
+<div class="pointer-events-none fixed z-50" style="left: {m.x}px; top: {m.y}px;">
 	{#if visible}
-		<div transition:fade={{duration: 150}}>
-			<div transition:scale={{start: .8, duration: 150}} class="w-[500px] hidden md:block">
+		<div transition:fade={{ duration: 150 }}>
+			<div transition:scale={{ start: 0.8, duration: 150 }} class="hidden w-[500px] md:block">
 				{#if currentImage === images.engineer}
 					<img
 						src={images.engineer}
 						alt=""
-						class="object-cover aspect-video rounded-2xl border border-black/10 shadow-2xl"
+						class="aspect-video rounded-2xl border border-black/10 object-cover shadow-2xl"
 					/>
 				{:else if currentImage === images.santander}
 					<img
 						src={images.santander}
 						alt=""
-						class="object-cover aspect-video rounded-2xl border border-black/10 shadow-2xl"
+						class="aspect-video rounded-2xl border border-black/10 object-cover shadow-2xl"
 					/>
 				{:else if currentImage === images.northampton}
 					<img
 						src={images.northampton}
 						alt=""
-						class="object-cover aspect-video rounded-2xl border border-black/10 shadow-2xl"
+						class="aspect-video rounded-2xl border border-black/10 object-cover shadow-2xl"
 					/>
 				{/if}
 			</div>
 		</div>
 	{/if}
 </div>
-<div class="sticky flex top-0 p-8 z-50 lg: -ml-4">
+<div class="lg: sticky top-0 z-50 -ml-4 flex p-8">
 	<Nav />
 </div>
 
 <div class="relative px-8 py-10">
-	<h1 class="text-3xl xl:text-4xl font-medium">James Morris</h1>
-	<p class="text-lg xl:text-xl max-w-md mt-6 font-light" on:mouseleave={handleMouseLeave}>
+	<h1 class="text-3xl font-medium xl:text-4xl">James Morris</h1>
+	<p class="mt-6 max-w-md text-lg font-light xl:text-xl" on:mouseleave={handleMouseLeave}>
 		Cool person from <span
-			class="font-normal cursor-cell"
+			class="group cursor-cell rounded-md bg-black/5 px-1 font-normal transition-colors hover:bg-black/10 xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.northampton)}
 			on:mouseleave={handleMouseLeave}
 		>
-			Northampton, United Kingdom.
+			<span
+				class="transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
+			>
+				Northampton, United{' '}
+			</span>
+			<span
+				class="transition-colors duration-150 xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
+			>
+				{' '}Kingdom.
+			</span>
 		</span>
 		Currently working as a
 		<span
-			class="font-normal cursor-cell"
+			class="group cursor-cell rounded-md bg-black/5 px-1 font-normal transition-colors hover:bg-black/10 xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.engineer)}
 			on:mouseleave={handleMouseLeave}
 		>
-			Software Engineer
+			<span
+				class="transition-colors xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
+			>
+				Software{' '}
+			</span>
+			<span
+				class="transition-colors duration-150 xl:rounded-md xl:bg-black/5 xl:px-1 xl:group-hover:bg-black/10"
+			>
+				{' '}Engineer
+			</span>
 		</span>
 		at a company called
 		<span
-			class="font-normal cursor-cell"
+			class="group cursor-cell font-normal"
 			on:mouseenter={() => handleMouseEnter(images.santander)}
 			on:mouseleave={handleMouseLeave}
 		>
-			Santander.
+			<span
+				class="rounded-md bg-black/5 px-1 transition-colors duration-150 group-hover:bg-black/10"
+			>
+				Santander.
+			</span>
 		</span>
 	</p>
 
-	<div class="pt-8 relative">
+	<div class="relative pt-8">
 		<ButtonLink href="mailto:hey@jamesmorris.co">Request resume</ButtonLink>
 	</div>
 </div>
@@ -112,7 +134,7 @@
 		I am a customer-focused full-stack software programmer with experience in creating performant
 		and engaging web experiences.
 	</p>
-	<p class="font-light text-lg xl:text-xl mt-6">
+	<p class="mt-6 text-lg font-light xl:text-xl">
 		Always excited to learn something new. I'm proficient in many languages/frameworks and strive to
 		deliver high quality results. I've worked on a variety of projects, from small internal tools to
 		large scale web applications. I'm always looking for new challenges and opportunities to learn.
