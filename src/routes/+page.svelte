@@ -20,7 +20,7 @@
 	let visible = false;
 	let currentImage = images.engineer;
 
-	function handleMouseMove(e: WithTarget<MouseEvent, Window>) {
+	function handleMouseMove(e: WithTarget<MouseEvent, HTMLDivElement>) {
 		m = { x: e.clientX, y: e.clientY };
 	}
 
@@ -33,8 +33,6 @@
 		visible = false;
 	}
 </script>
-
-<svelte:window on:mousemove={handleMouseMove} />
 
 <svelte:head>
 	<title>James Morris</title>
@@ -71,10 +69,11 @@
 	<Nav />
 </div>
 
-<div class="relative px-8 py-10">
+<div class="relative px-8 py-10" on:mousemove={handleMouseMove} role="none">
 	<h1 class="text-3xl font-medium xl:text-4xl">James Morris</h1>
 	<p class="mt-6 max-w-md text-lg font-light xl:text-xl" on:mouseleave={handleMouseLeave}>
 		Cool person from <span
+			role="none"
 			class="group font-normal transition-all md:cursor-cell md:rounded-md md:bg-black/5 md:px-1 md:hover:bg-black/10 lg:transition-colors xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.northampton)}
 			on:mouseleave={handleMouseLeave}
@@ -92,6 +91,7 @@
 		</span>
 		Currently working as a
 		<span
+			role="none"
 			class="group font-normal transition-all md:cursor-cell md:rounded-md md:bg-black/5 md:px-1 md:hover:bg-black/10 lg:transition-colors xl:bg-transparent xl:px-0 xl:hover:bg-transparent"
 			on:mouseenter={() => handleMouseEnter(images.engineer)}
 			on:mouseleave={handleMouseLeave}
@@ -109,6 +109,7 @@
 		</span>
 		at a company called
 		<span
+			role="none"
 			class="group font-normal md:cursor-cell"
 			on:mouseenter={() => handleMouseEnter(images.santander)}
 			on:mouseleave={handleMouseLeave}

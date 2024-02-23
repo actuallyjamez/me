@@ -23,6 +23,7 @@
 <div
 	class={'flex justify-between border border-black/5 bg-white/70 shadow-xl transition-shadow duration-150 backdrop-blur-md rounded-full'}
 	on:mouseleave={() => (selected = undefined)}
+	role='navigation'
 	
 >
 	<div class="flex justify-between">
