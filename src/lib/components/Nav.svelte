@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { crossfade } from 'svelte/transition';
 
-	let items = [
+	const items = [
 		['Github', 'https://github.com/actuallyjamez'],
 		['Twitter', 'http://twitter.com/actuallyjamez'],
 		['SoundCloud', 'https://soundcloud.com/actuallyjamez']
@@ -17,12 +17,12 @@
 		}
 	});
 
-	let selected: string | undefined;
+	let selected = $state<string | undefined>(undefined);
 </script>
 
 <div
 	class={'flex justify-between border border-black/5 bg-white/70 shadow-xl transition-shadow duration-150 backdrop-blur-md rounded-full'}
-	on:mouseleave={() => (selected = undefined)}
+	onmouseleave={() => (selected = undefined)}
 	role='navigation'
 	
 >
@@ -32,9 +32,9 @@
 				class="relative sm:after:content-['_↗'] py-4 px-6 group transition-all duration-150"
 				rel="noopener noreferrer"
 				target="_blank"
-				on:mouseenter={() => (selected = href)}
-				on:focus={() => (selected = href)}
-				on:focusout={() => (selected = undefined)}
+				onmouseenter={() => (selected = href)}
+				onfocus={() => (selected = href)}
+				onfocusout={() => (selected = undefined)}
 				{href}
 			>
 				{#if selected === href}
@@ -42,7 +42,7 @@
 						in:receive={{ key: 'hoverBackground' }}
 						out:send={{ key: 'hoverBackground' }}
 						class="absolute m-1 inset-0 rounded-full bg-black/5 -z-10 group-active:bg-black/10 transition-colors"
-					/>
+					></span>
 				{/if}
 				<span class="relative z-10">{label}</span>
 			</a>

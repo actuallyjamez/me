@@ -5,14 +5,16 @@
 	import { inject } from '@vercel/analytics';
 
 	inject({ mode: dev ? 'development' : 'production' });
+
+	const { children } = $props();
 </script>
 
-<div class="w-full h-96 absolute bg-gradient-to-b from-green-100/50 to-transparent -z-20" />
+<div class="absolute -z-20 h-96 w-full bg-gradient-to-b from-green-100/50 to-transparent"></div>
 <div
-	class="absolute inset-x-0 top-[-10rem] -z-20 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem] opacity-70"
+	class="absolute inset-x-0 top-[-10rem] -z-20 transform-gpu overflow-hidden opacity-70 blur-3xl sm:top-[-20rem]"
 >
 	<svg
-		class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem] opacity-70"
+		class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] opacity-70 sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
 		viewBox="0 0 1155 678"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -38,16 +40,16 @@
 	</svg>
 </div>
 
-<div class="max-w-7xl mx-auto">
-	<slot />
+<div class="mx-auto max-w-7xl">
+	{@render children()}
 </div>
 
-<footer class="flex justify-center my-8 ">
+<footer class="my-8 flex justify-center">
 	<a
 		href="https://twitter.com/actuallyjamez"
 		rel="noopener noreferrer"
 		target="_blank"
-		class="opacity-50 hover:opacity-100 transition-opacity"
+		class="opacity-50 transition-opacity hover:opacity-100"
 	>
 		made by me
 	</a>

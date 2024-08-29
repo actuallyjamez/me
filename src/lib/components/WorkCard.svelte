@@ -1,13 +1,25 @@
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+
+	type Props = {
+		title: string;
+		description: Snippet;
+		actions?: Snippet;
+	};
+
+	const { title, description, actions }: Props = $props();
+</script>
+
 <div class="pb-20">
 	<h1 class="text-lg font-medium">
-		<slot name="title" />
+		{title}
 	</h1>
 
-	<p class="font-light text-lg max-w-md mt-4 leading-snug">
-		<slot name="description" />
+	<p class="mt-4 max-w-md text-lg font-light leading-snug">
+		{@render description()}
 	</p>
 
-	<div class="pt-6 flex space-x-3">
-		<slot name="actions" />
+	<div class="flex space-x-3 pt-6">
+		{@render actions?.()}
 	</div>
 </div>

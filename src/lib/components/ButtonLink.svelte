@@ -1,10 +1,17 @@
 <script lang="ts">
-	export let href: string;
+	import type { Snippet } from 'svelte';
+
+	type Props = {
+		children: Snippet;
+		href: string;
+	};
+
+	const { href, children }: Props = $props();
 </script>
 
 <a
-	class="after:content-['_↗'] bg-black/5 border px-3 py-1.5 rounded-full hover:bg-black/10 border-black/5 transition-colors active:bg-black/20"
+	class="rounded-full border border-black/5 bg-black/5 px-3 py-1.5 transition-colors after:content-['_↗'] hover:bg-black/10 active:bg-black/20"
 	{href}
 >
-	<slot />
+	{@render children()}
 </a>
