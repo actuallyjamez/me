@@ -1,10 +1,5 @@
 <script>
-	import '../fonts/wotfard/stylesheet.css';
 	import '../app.css';
-	import { dev } from '$app/environment';
-	import { inject } from '@vercel/analytics';
-
-	inject({ mode: dev ? 'development' : 'production' });
 
 	const { children } = $props();
 </script>
