@@ -52,11 +52,12 @@
 		</div>
 	{/if}
 </div>
-<div class="lg: sticky top-0 z-50 -ml-4 flex p-8">
+
+<div class="lg:sticky top-0 z-50 -ml-3 flex p-8">
 	<Nav />
 </div>
 
-<div class="relative px-8 py-10" onmousemove={handleMouseMove} role="none">
+<div class="relative px-8 pb-10 pt-6" onmousemove={handleMouseMove} role="none">
 	<h1 class="text-3xl font-medium xl:text-4xl">James Morris</h1>
 	<p class="mt-6 max-w-md text-lg font-light xl:text-xl" onmouseleave={handleMouseLeave}>
 		Cool person from <span
