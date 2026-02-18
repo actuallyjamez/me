@@ -3,7 +3,7 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import CityImage from '$lib/images/city.webp';
 	import EngineerImage from '$lib/images/engineer.gif';
-	import SantanderImage from '$lib/images/santander.jpg';
+	import BlcImage from '$lib/images/blc.webp';
 	import Section from '$lib/components/Section.svelte';
 	import WorkGrid from '$lib/components/WorkGrid.svelte';
 	import WorkCard from '$lib/components/WorkCard.svelte';
@@ -11,7 +11,7 @@
 
 	type WithTarget<Event, Target> = Event & { currentTarget: Target };
 
-	const images = [EngineerImage, SantanderImage, CityImage];
+	const images = [EngineerImage, BlcImage, CityImage];
 
 	let m = $state({ x: 0, y: 0 });
 	let visible = $state(false);
@@ -53,11 +53,11 @@
 	{/if}
 </div>
 
-<div class="lg:sticky top-0 z-50 -ml-3 flex p-8">
+<div class="top-0 z-50 -ml-3 flex p-8 lg:sticky">
 	<Nav />
 </div>
 
-<div class="relative px-8 pb-10 pt-6" onmousemove={handleMouseMove} role="none">
+<div class="relative px-8 pt-6 pb-10" onmousemove={handleMouseMove} role="none">
 	<h1 class="text-3xl font-medium xl:text-4xl">James Morris</h1>
 	<p class="mt-6 max-w-md text-lg font-light xl:text-xl" onmouseleave={handleMouseLeave}>
 		Cool person from <span
@@ -105,7 +105,7 @@
 			<span
 				class="rounded-md transition-all duration-150 md:bg-black/5 md:px-1 md:group-hover:bg-black/10 lg:transition-colors"
 			>
-				Santander.
+				Blue Light Card.
 			</span>
 		</span>
 	</p>
